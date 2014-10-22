@@ -4,7 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Web;
 
-namespace TechnicalSupportSystemV2.Repository
+namespace TechnicalSupportSystem.Repository
 {
     public interface IRepository
     {

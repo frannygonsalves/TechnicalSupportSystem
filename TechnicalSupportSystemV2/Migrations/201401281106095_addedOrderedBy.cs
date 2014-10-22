@@ -1,4 +1,4 @@
-namespace TechnicalSupportSystemV2.Migrations
+namespace TechnicalSupportSystem.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

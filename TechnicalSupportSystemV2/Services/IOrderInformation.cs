@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TechnicalSupportSystem.Models;
 
-namespace TechnicalSupportSystemV2.Services
+namespace TechnicalSupportSystem.Services
 {
     public interface IOrderInformation
     {

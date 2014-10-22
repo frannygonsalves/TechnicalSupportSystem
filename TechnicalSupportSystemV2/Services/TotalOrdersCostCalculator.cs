@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using TechnicalSupportSystem.Models;
 
-namespace TechnicalSupportSystemV2.Services
+namespace TechnicalSupportSystem.Services
 {
     public class TotalOrdersCostCalculator:ITotalOrdersCostCalculator
     {

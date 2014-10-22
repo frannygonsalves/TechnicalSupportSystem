@@ -7,7 +7,7 @@ using System.Globalization;
 using System.Web.Security;
 using TechnicalSupportSystem.Models;
 
-namespace TechnicalSupportSystemV2.Models
+namespace TechnicalSupportSystem.Models
 {
     
     [Table("UserProfile")]

@@ -6,19 +6,19 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TechnicalSupportSystem.Models;
-using TechnicalSupportSystemV2.DAL;
-using TechnicalSupportSystemV2.ViewModels;
+using TechnicalSupportSystem.DAL;
+using TechnicalSupportSystem.ViewModels;
 using Postal;
 using System.Collections;
-using TechnicalSupportSystemV2.Repository;
-using TechnicalSupportSystemV2.Services;
+using TechnicalSupportSystem.Repository;
+using TechnicalSupportSystem.Services;
 using DotNet.Highcharts;
 using DotNet.Highcharts.Options;
 using DotNet.Highcharts.Enums;
 using DotNet.Highcharts.Helpers;
 using System.Drawing;
 
-namespace TechnicalSupportSystemV2.Controllers
+namespace TechnicalSupportSystem.Controllers
 {
     public class StudentController : Controller
     {

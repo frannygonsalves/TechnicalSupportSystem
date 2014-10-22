@@ -1,4 +1,4 @@
-namespace TechnicalSupportSystemV2.Migrations
+namespace TechnicalSupportSystem.Migrations
 {
     using System;
     using System.Data.Entity;
@@ -7,14 +7,14 @@ namespace TechnicalSupportSystemV2.Migrations
     using System.Web.Security;
     using WebMatrix.WebData;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<TechnicalSupportSystemV2.DAL.SystemDBContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<TechnicalSupportSystem.DAL.SystemDBContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(TechnicalSupportSystemV2.DAL.SystemDBContext context)
+        protected override void Seed(TechnicalSupportSystem.DAL.SystemDBContext context)
         {
             //  This method will be called after migrating to the latest version.
 

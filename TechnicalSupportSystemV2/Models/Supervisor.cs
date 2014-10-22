@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
-using TechnicalSupportSystemV2.Models;
+using TechnicalSupportSystem.Models;
 
 namespace TechnicalSupportSystem.Models
 {

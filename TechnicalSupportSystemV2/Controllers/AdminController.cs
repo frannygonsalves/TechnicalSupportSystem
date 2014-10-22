@@ -7,11 +7,11 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 using TechnicalSupportSystem.Models;
-using TechnicalSupportSystemV2.DAL;
-using TechnicalSupportSystemV2.Models;
+using TechnicalSupportSystem.DAL;
+using TechnicalSupportSystem.Models;
 using WebMatrix.WebData;
 
-namespace TechnicalSupportSystemV2.Controllers
+namespace TechnicalSupportSystem.Controllers
 {
     public class AdminController : Controller
     {

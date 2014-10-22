@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using TechnicalSupportSystemV2.Repository;
-using TechnicalSupportSystemV2.Services;
+using TechnicalSupportSystem.Repository;
+using TechnicalSupportSystem.Services;
 
-namespace TechnicalSupportSystemV2.Infrastructure
+namespace TechnicalSupportSystem.Infrastructure
 {
 
     public class NinjectDependencyResolver : IDependencyResolver

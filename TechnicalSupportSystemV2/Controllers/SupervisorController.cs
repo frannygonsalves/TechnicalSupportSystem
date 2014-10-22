@@ -7,10 +7,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TechnicalSupportSystem.Models;
-using TechnicalSupportSystemV2.DAL;
-using TechnicalSupportSystemV2.ViewModels;
+using TechnicalSupportSystem.DAL;
+using TechnicalSupportSystem.ViewModels;
 
-namespace TechnicalSupportSystemV2.Controllers
+namespace TechnicalSupportSystem.Controllers
 {
     [Authorize]
     public class SupervisorController : Controller

@@ -5,11 +5,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TechnicalSupportSystem.Models;
-using TechnicalSupportSystemV2.DAL;
-using TechnicalSupportSystemV2.Models;
+using TechnicalSupportSystem.DAL;
+using TechnicalSupportSystem.Models;
 
 
-namespace TechnicalSupportSystemV2.Controllers
+namespace TechnicalSupportSystem.Controllers
 {
     [Authorize]
     public class HomeController : Controller

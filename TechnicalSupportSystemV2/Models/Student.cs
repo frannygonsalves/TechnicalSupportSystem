@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 using System.Web.Security;
-using TechnicalSupportSystemV2.Models;
+using TechnicalSupportSystem.Models;
 
 namespace TechnicalSupportSystem.Models
 {

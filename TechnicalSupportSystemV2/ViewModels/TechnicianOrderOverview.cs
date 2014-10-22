@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using TechnicalSupportSystemV2.Models;
+using TechnicalSupportSystem.Models;
 
-namespace TechnicalSupportSystemV2.ViewModels
+namespace TechnicalSupportSystem.ViewModels
 {
     public class TechnicianOrderOverview
     {

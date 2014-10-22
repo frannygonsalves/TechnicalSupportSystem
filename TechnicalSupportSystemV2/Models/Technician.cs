@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace TechnicalSupportSystemV2.Models
+namespace TechnicalSupportSystem.Models
 {
     public class Technician : Person
     {

@@ -4,9 +4,9 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using TechnicalSupportSystem.Models;
-using TechnicalSupportSystemV2.Models;
+using TechnicalSupportSystem.Models;
 
-namespace TechnicalSupportSystemV2.DAL
+namespace TechnicalSupportSystem.DAL
 {
     public class SystemDBContext:DbContext
     {

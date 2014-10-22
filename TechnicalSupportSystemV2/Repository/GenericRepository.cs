@@ -6,9 +6,9 @@ using System.Data.Objects.DataClasses;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Web;
-using TechnicalSupportSystemV2.DAL;
+using TechnicalSupportSystem.DAL;
 
-namespace TechnicalSupportSystemV2.Repository
+namespace TechnicalSupportSystem.Repository
 {
     public class GenericRepository : IRepository
     {

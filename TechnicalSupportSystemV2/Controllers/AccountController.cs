@@ -8,13 +8,13 @@ using System.Web.Security;
 using DotNetOpenAuth.AspNet;
 using Microsoft.Web.WebPages.OAuth;
 using WebMatrix.WebData;
-using TechnicalSupportSystemV2.Models;
-using TechnicalSupportSystemV2.DAL;
+using TechnicalSupportSystem.Models;
+using TechnicalSupportSystem.DAL;
 using TechnicalSupportSystem.Models;
 using System.Data;
 using Postal;
 
-namespace TechnicalSupportSystemV2.Controllers
+namespace TechnicalSupportSystem.Controllers
 {
     [Authorize]
     public class AccountController : Controller
