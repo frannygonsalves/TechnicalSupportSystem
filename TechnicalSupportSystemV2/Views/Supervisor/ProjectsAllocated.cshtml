@@ -1,0 +1,66 @@
+﻿@model IEnumerable<TechnicalSupportSystem.Models.Project>
+
+@{
+    ViewBag.Title = "ProjectsAllocated";
+}
+
+<h2>Projects Allocated</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProjectNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Module)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProjectName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProjectDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Budget)
+        </th>
+        <th>
+            Student Full Name
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjectNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Module)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjectName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjectDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Budget)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Student.FirstOrDefault().FirstName) @Html.DisplayFor(modelItem => item.Student.FirstOrDefault().LastName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit Budget", "AdjustProjectBudget", new { id = item.ProjectID })
+        </td>
+
+
+    </tr>
+}
+
+</table>
+
+<div>
+    @Html.ActionLink("Back To Home", "Index")
+</div>

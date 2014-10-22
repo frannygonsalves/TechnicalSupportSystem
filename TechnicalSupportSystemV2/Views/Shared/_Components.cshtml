@@ -1,0 +1,48 @@
+﻿@model TechnicalSupportSystem.Models.Order
+
+<h2>Components In Order</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Component Name
+        </th>
+        <th>
+            Stock Code
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Quantity
+        </th>
+        <th>
+            Price (£)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.Components) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StockCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+    </tr>
+}
+</table>
+<div> Component total (£) @Html.DisplayFor(model => model.ComponentTotal)</div>
+<div> Delivery Charge (£) @Html.DisplayFor(model => model.DeliveryCost)</div>
+<div> Order total (£) @Html.DisplayFor(model => model.OrderTotal)</div>
+<br />

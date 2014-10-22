@@ -1,0 +1,54 @@
+﻿@model IEnumerable<TechnicalSupportSystemV2.Models.UserProfile>
+
+@{
+    ViewBag.Title = "ApproveAccounts";
+}
+
+<h2>Accounts which need to be activated </h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            Account Requested
+        </th>
+        <th></th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem=>item.UserType)
+        </td>
+        <td>
+            @using (Html.BeginForm("ActivateAccount","Admin", new{ id = item.UserId },FormMethod.Post))
+            {
+                <input class="btn btn-default btn-xs" type="submit" value ="Activate" />
+            }
+        </td>
+        <td>
+            @using (Html.BeginForm("RejectAccount", "Admin", new { id = item.UserId }, FormMethod.Post))
+            {
+                <input class ="btn btn-default btn-xs" type="submit" value ="Reject" />
+            }
+        </td>
+    </tr>
+}
+
+</table>
+
+<div>
+    @Html.ActionLink("Back To Home", "Index")
+</div>

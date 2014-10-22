@@ -1,0 +1,9 @@
+﻿@model IEnumerable<TechnicalSupportSystem.Models.Order>
+
+@{
+    ViewBag.Title = "RejectedOrders";
+}
+
+<h2>Rejected Orders</h2>
+
+@Html.Partial("_Orders", Model)

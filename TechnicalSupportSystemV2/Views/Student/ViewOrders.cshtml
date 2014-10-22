@@ -1,0 +1,60 @@
+﻿@model IEnumerable<TechnicalSupportSystem.Models.Order>
+
+@{
+    ViewBag.Title = "ViewOrders";
+}
+
+<h2>Orders Placed</h2>
+
+
+<table class="table table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestDate)
+        </th>
+        <th>
+            Order Status
+        </th>
+        <th>
+            Order Total (£)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestDate)
+        </td>
+        <td>
+            @if(item.IsApproved==true && item.IsOrdered==false)
+            {
+                <span> Approved By Supervisor and is waiting to be ordered by technician</span>
+            }
+            else if (item.IsApproved == true && item.IsOrdered == true)
+            {
+                <span>Approved By Supervisor and is ordered by technician</span>
+            }
+            else if (item.IsChecked == false)
+            {
+                <span>Needs to be reviewed by Supervisor</span>
+            }
+            else if (item.IsApproved == false && item.IsChecked == true)
+            {
+                <span>Rejected By Supervisor</span>
+            }
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderTotal)
+        </td>
+        <td>
+            @Html.ActionLink("View Component Details", "ViewComponentDetails", new { id = item.OrderID })
+        </td>
+    </tr>
+}
+
+</table>
+
+<div>
+    @Html.ActionLink("Back To Home", "Index")
+</div>

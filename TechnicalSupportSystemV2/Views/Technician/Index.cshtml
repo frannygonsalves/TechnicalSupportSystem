@@ -1,0 +1,33 @@
+﻿@model TechnicalSupportSystemV2.ViewModels.TechnicianOrderOverview
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<script src="~/Scripts/jquery-1.9.1.js"></script>
+<script src="~/Scripts/Highcharts-3.0.1/js/highcharts.js"></script>
+
+
+
+@if (Model != null)
+{
+    <h1>Welcome @Model.Technician.FirstName  @Model.Technician.LastName</h1>
+    
+    <h3>Menu</h3> 
+    
+        <ul class="nav nav-justified">
+            <li class='active'><a href="@Url.Action("ViewApprovedOrders")"><span>View all approved Orders that needs Ordering</span></a></li>
+            <li><a href="@Url.Action("ViewNotNotifiedOrderedOrders")"><span>Notify student on Order recieved</span></a></li>
+            <li><a href="@Url.Action("ViewNotCollectedOrders")"><span>Update Order as collected/Notify Student Again</span></a></li>
+            <li><a href="@Url.Action("ViewProjectSpendForStudent")"><span>View project spend for student</span></a></li>
+            <li class='last'><a href="@Url.Action("ViewOrderedOrders")"><span>View Orders which are ordered</span></a></li>
+        </ul>
+    
+        <div>@Model.PieChart</div>
+
+}
+else
+{    
+    @:username does not exist
+}

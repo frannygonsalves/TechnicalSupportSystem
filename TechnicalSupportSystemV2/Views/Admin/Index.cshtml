@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+
+<h1>Welcome Admin!</h1>
+
+<h3>Menu</h3>
+
+<ul class="nav nav-list">
+    <li class='active'><a href="@Url.Action("ApproveAccounts")"><span>Approve/Reject Accounts</span></a></li>
+    <li><a href="@Url.Action("DeactivateAccount")"><span>Deactivate Accounts</span></a></li>
+    <li><a href="@Url.Action("DeleteAccounts")"><span>Delete Rejected Accounts</span></a></li>
+    <li><a href="@Url.Action("ProjectsNotRegisteredBySupervisors")"><span>View Projects not registered by supervisors / correct supervisor email</span></a></li>
+    <li><a href="@Url.Action("ProjectsRegistered")"><span>Change project supervisor</span></a></li>
+    <li class='last'><a href="@Url.Action("ReactivateAccount")"><span>Reactivate Accounts</span></a></li>
+</ul>

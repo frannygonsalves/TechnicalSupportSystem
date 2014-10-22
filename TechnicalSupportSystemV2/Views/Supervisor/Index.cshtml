@@ -1,0 +1,31 @@
+﻿@model TechnicalSupportSystem.Models.Supervisor
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+
+@if (Model != null)
+{
+   <h1>Welcome @Model.FirstName  @Model.LastName</h1>
+    
+    
+    <h3>Menu</h3>
+     
+    
+        <ul class="nav nav-list">
+            <li class='active'><a href="@Url.Action("ApproveOrders")"><span>Approve Orders</span></a></li>
+            <li><a href="@Url.Action("ProjectsAllocated")"><span>View Projects Allocated</span></a></li>
+            <li><a href="@Url.Action("RejectedOrders")"><span>View Rejected Orders</span></a></li>
+            <li class='last'><a href="@Url.Action("ApprovedOrders")"><span>View Approved Orders</span></a></li>
+        </ul>
+     
+    
+}
+    
+else{    
+     @:username does not exist
+}
+

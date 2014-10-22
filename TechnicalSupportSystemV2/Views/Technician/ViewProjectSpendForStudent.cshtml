@@ -1,0 +1,42 @@
+﻿@model TechnicalSupportSystem.Models.Order
+
+@{
+    ViewBag.Title = "ViewProjectSpendForStudent";
+}
+
+<h2>View Project Spend For Student</h2>
+
+ @using (Html.BeginForm()){    
+         <p> Student Username: @Html.TextBox("searchString") <br />   
+         <input type="submit" value="Filter" /></p> 
+  } 
+
+<table class="table">
+    <tr>
+        <th>
+            Student Username
+        </th>
+         <th>
+            Student Full Name
+        </th>
+        <th>
+            Order Total (£)
+        </th>
+        <th></th>
+    </tr>
+
+    <tr>
+        <td>
+            @Html.DisplayFor(model => model.Student.UserProfile.UserName)
+        </td>
+         <td>
+            @Html.DisplayFor(model => model.Student.FirstName) @Html.DisplayFor(model => model.Student.LastName)
+        </td>
+        <td>@Html.DisplayFor(model=>model.OrderTotal)</td>
+    </tr>
+
+</table>
+
+<div>
+    @Html.ActionLink("Back To Home", "Index")
+</div>

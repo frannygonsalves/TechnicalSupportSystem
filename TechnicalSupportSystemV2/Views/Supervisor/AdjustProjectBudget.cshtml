@@ -1,0 +1,37 @@
+﻿@model TechnicalSupportSystem.Models.Project
+
+@{
+    ViewBag.Title = "AdjustProjectBudget";
+}
+
+<h2>AdjustProjectBudget</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Project</legend>
+
+        @Html.HiddenFor(model => model.ProjectID)
+        <div class="form-group">
+            @Html.LabelFor(model => model.Budget, new{@class = "col-md-2 control-label"})
+            <div class="col-md-6">
+                @Html.TextBoxFor(model => model.Budget, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Budget)
+            </div>
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to Projects", "ProjectsAllocated")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

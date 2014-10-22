@@ -1,0 +1,79 @@
+﻿@model IEnumerable<TechnicalSupportSystem.Models.Order>
+
+@{
+    ViewBag.Title = "ViewApprovedOrders";
+}
+
+<h2>Orders Approved by Supervisor</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestDate)
+        </th>
+         <th>
+             Vendor Order Number
+        </th>
+        <th>
+             Vendor Name
+        </th>
+        <th>
+            Student Full Name
+        </th>
+        <th>
+            Supervisor Full Name
+        </th>
+        <th>
+            Order Total Exc Delivery (£)
+        </th>
+        <th>
+            Order Total Inc Delivery(£)
+        </th>
+        <th></th>
+        <th></th>
+
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+         <td>
+            @Html.DisplayFor(modelItem => item.RequestDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VendorOrderNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VendorName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Student.FirstName) @Html.DisplayFor(modelItem => item.Student.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Student.Project.Supervisor.FirstName) @Html.DisplayFor(modelItem => item.Student.Project.Supervisor.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ComponentTotal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderTotal)
+        </td>
+        <td>
+            @Html.ActionLink("Component Details", "ViewComponentDetails", new { id=item.OrderID })
+        </td>
+
+        <td>
+            @using (Html.BeginForm("RequestOrdered", "Technician", new { Id = item.OrderID }, FormMethod.Post))
+            {       
+         <input class="btn btn-default btn-xs" type="submit" value="Request Ordered" />
+           }
+        </td>
+
+
+    </tr>
+}
+</table>
+
+<div>
+    @Html.ActionLink("Back To Home", "Index")
+</div>

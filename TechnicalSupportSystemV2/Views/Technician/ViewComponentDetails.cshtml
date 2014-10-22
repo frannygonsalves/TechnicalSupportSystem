@@ -1,0 +1,14 @@
+﻿@model TechnicalSupportSystem.Models.Order
+
+@{
+    ViewBag.Title = "ViewComponentDetails";
+}
+
+<h2>View Components In Order @Model.VendorOrderNumber</h2>
+
+@Html.Partial("_Components", Model)
+
+
+<a href="javascript:history.back()">Back to List</a>
+
+

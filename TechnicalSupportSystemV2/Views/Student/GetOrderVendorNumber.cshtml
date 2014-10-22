@@ -1,0 +1,37 @@
+﻿@model TechnicalSupportSystem.Models.Order
+
+@{
+    ViewBag.Title = "GetOrderVendorNumber";
+}
+
+<h2>Enter your Vendor Order Number</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Order</legend>
+
+        @Html.HiddenFor(model => model.OrderID)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.VendorOrderNumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.VendorOrderNumber)
+            @Html.ValidationMessageFor(model => model.VendorOrderNumber)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

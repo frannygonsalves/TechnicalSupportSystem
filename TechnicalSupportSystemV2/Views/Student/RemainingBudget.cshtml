@@ -1,0 +1,43 @@
+﻿@model TechnicalSupportSystemV2.ViewModels.ProjectSpendView
+
+@{
+    ViewBag.Title = "RemainingBudget";
+}
+
+<script src="~/Scripts/jquery-1.9.1.js"></script>
+<script src="~/Scripts/Highcharts-3.0.1/js/highcharts.js"></script>
+
+<h2>Remaining Budget</h2>
+
+@Model.PieChart
+
+<table class="table">
+    <tr>
+        <th>
+                @Html.DisplayNameFor(model => model.Project.ProjectName)
+        </th>
+        <th>
+            Budget (£)
+        </th>
+        <th>
+            Budget(£) if Pending Orders Approved
+        </th>
+    </tr>
+
+    <tr>
+        <td>
+                @Html.DisplayFor(model => model.Project.ProjectName)
+        </td>
+        <td>
+                @Html.DisplayFor(model => model.Budget)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.BudgetMinusCost)
+        </td>
+    </tr>
+
+</table>
+
+<p>
+    @Html.ActionLink("Back to Home", "Index")
+</p>

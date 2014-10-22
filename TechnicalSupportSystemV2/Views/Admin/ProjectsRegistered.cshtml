@@ -1,0 +1,40 @@
+﻿@model IEnumerable<TechnicalSupportSystem.Models.Project>
+
+
+@{
+    ViewBag.Title = "ProjectsRegistered";
+}
+
+<h2>Projects Registered</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProjectNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProjectName)
+        </th>
+        <th>Supervisor Email</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Supervisor.UserProfile.Email)
+            </td>
+            <td>
+                @Html.ActionLink("Change Supervisor", "ChangeProjectSupervisor", new { id = item.Supervisor.UserProfile.UserId }) 
+            </td>
+        </tr>
+    }
+
+</table>

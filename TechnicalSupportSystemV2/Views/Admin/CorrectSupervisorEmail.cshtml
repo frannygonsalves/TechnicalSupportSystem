@@ -1,0 +1,32 @@
+﻿@model TechnicalSupportSystemV2.Models.UserProfile
+
+@{
+    ViewBag.Title = "CorrectSupervisorEmail";
+}
+
+<h2>Correct Supervisor Email</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    
+    @Html.HiddenFor(model=> model.UserId)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Email, new { @class = "col-md-2 control-label" })
+        <div class="col-md-6">
+            @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+        </div>
+    </div>
+    
+    <p>
+        <input class ="btn btn-default btn-xs" type="submit" value="Save" />
+    </p>}
+
+<div>
+    @Html.ActionLink("Back to list", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

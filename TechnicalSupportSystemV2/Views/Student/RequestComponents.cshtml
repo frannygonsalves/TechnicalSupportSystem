@@ -1,0 +1,85 @@
+﻿@model TechnicalSupportSystem.Models.Project
+
+@{
+    ViewBag.Title = "RequestComponents";
+}
+
+<h2>Step 1: Enter Project Details</h2> 
+<div>*Project Budget will be reviewed and altered by your supervisor if neccessary</div> <br />
+
+@using (Html.BeginForm("RequestComponents", "Student", FormMethod.Post, new { @class = "form-horizontal", role = "form" })) {
+    @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ProjectNo, new { @class = "col-md-2 control-label" })
+            <div class="col-md-6">
+                @Html.TextBoxFor(model => model.ProjectNo, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ProjectNo)
+            </div>
+        </div>
+       
+        <div class="form-group">
+            @Html.LabelFor(model => model.Module, new { @class = "col-md-2 control-label" })
+            <div class="col-md-6">
+                @Html.TextBoxFor(model => model.Module, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Module)
+            </div>
+        </div>
+        
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ProjectName, new { @class = "col-md-2 control-label" })
+            <div class="col-md-6">
+                @Html.TextBoxFor(model => model.ProjectName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ProjectName)
+            </div>
+        </div> 
+        
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ProjectDescription, new { @class = "col-md-2 control-label" })
+            <div class="col-md-6">
+                @Html.TextAreaFor(model => model.ProjectDescription, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ProjectDescription)
+            </div>
+        </div>
+    
+    <div class="form-group">
+            @Html.LabelFor(model => model.IsGroupProject, new { @class = "col-md-2 control-label" })
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.IsGroupProject, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.IsGroupProject)
+            </div>
+        </div>
+       
+    <div class="form-group">
+        <div class = "col-md-2 control-label">Budget (£)*</div>
+            <div class="col-md-6">
+                @Html.TextBoxFor(model => model.Budget, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Budget)
+            </div>
+        </div>
+
+    <div class="form-group">
+            <div class="col-md-2 control-label">Supervisor Email</div>
+            <div class="col-md-6">
+                @Html.TextBoxFor(model => model.Supervisor.UserProfile.Email, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Supervisor.UserProfile.Email)
+            </div>
+     </div>
+
+    <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="submit" class="btn btn-default" />
+                    </div>
+                </div>
+    
+}
+
+<div>
+    @Html.ActionLink("Cancel", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

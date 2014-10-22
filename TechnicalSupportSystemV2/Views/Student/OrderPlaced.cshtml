@@ -1,0 +1,39 @@
+﻿@model TechnicalSupportSystem.Models.Order
+
+@{
+    ViewBag.Title = "OrderPlaced";
+}
+
+<h2>Order has been placed in the system</h2>
+
+<fieldset>
+    <legend>Order</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RequestDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RequestDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.VendorOrderNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.VendorOrderNumber)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OrderTotal)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OrderTotal)
+    </div>
+
+    
+
+</fieldset>
+<p>
+    @Html.ActionLink("Place Another Order", "SaveComponents") |
+    @Html.ActionLink("Back to Home", "Index")
+</p>

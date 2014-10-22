@@ -1,0 +1,35 @@
+﻿@model TechnicalSupportSystemV2.ViewModels.ProjectSpendView
+
+
+
+@{
+    ViewBag.Title = "ProjectSpend";
+}
+
+<script src="~/Scripts/jquery-1.9.1.js"></script>
+<script src="~/Scripts/Highcharts-3.0.1/js/highcharts.js"></script>
+
+
+
+
+
+<h2>Project Spend</h2>
+
+@Model.BarChart
+
+<table class="table table-hover">
+    <tr>
+        <th>Total Orders Cost Including Delivery</th>
+    </tr>
+
+        <tr>
+             <td>
+                @Html.DisplayFor(i=>i.TotalOrdersCost)
+            </td>
+        </tr>
+    
+</table>
+
+
+
+

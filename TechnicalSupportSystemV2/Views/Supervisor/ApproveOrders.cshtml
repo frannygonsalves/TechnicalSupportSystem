@@ -1,0 +1,102 @@
+﻿@model IEnumerable<TechnicalSupportSystem.Models.Order>
+
+@{
+    ViewBag.Title = "ApproveOrders";
+}
+
+<h2>Approve Orders</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            Request Date
+        </th>
+        <th>
+            Total Inc Delivery (£)
+        </th>
+        <th>
+             Order Above Budget ?
+        </th>
+        <th>
+            Group Project ?
+        </th>
+
+        <th>
+            Remaining Budget (£)
+        </th>
+        
+         <th>
+            Student Full Name
+        </th>
+        <th>
+            Project Name
+        </th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelitem => item.OrderTotal)
+        </td>
+        <td>
+            @if (item.IsOverBudget == true)
+            { 
+                <span class="label label-danger">Yes</span>
+            }
+            else
+            {
+                <span class="label label-success">No</span>
+            }
+        </td>
+        <td>
+            @if (item.Student.Project.IsGroupProject == true)
+            {
+                <span>Yes</span>
+            }
+            else
+            {
+                <span>No</span>
+            }
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Student.Project.Budget)
+        </td>
+       
+           <td>
+            @Html.DisplayFor(modelItem => item.Student.FirstName) @Html.DisplayFor(modelItem => item.Student.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Student.Project.ProjectName)
+        </td>
+
+        <td>
+            @Html.ActionLink("View Component Details", "ViewComponentDetails", new { id = item.OrderID }) 
+        </td>
+        <td>
+             @using (Html.BeginForm("UpdateOrderAsApproved", "Supervisor", new { Id = item.OrderID }, FormMethod.Post))
+            {       
+                <input class="btn btn-default btn-xs" type="submit" value ="Approve" />
+           } 
+        </td>
+        <td>
+             @using (Html.BeginForm("UpdateOrderAsRejected", "Supervisor", new { Id = item.OrderID }, FormMethod.Post))
+            {       
+                <input class="btn btn-default btn-xs" type="submit" value ="Reject" />
+
+           } 
+        </td>
+
+    </tr>
+}
+
+</table>
+
+@Html.ActionLink("Back to home","Index")

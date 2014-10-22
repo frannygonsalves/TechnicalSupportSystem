@@ -1,0 +1,11 @@
+﻿@model TechnicalSupportSystem.Models.Order
+
+@{
+    ViewBag.Title = "ViewComponentDetails";
+}
+
+
+@Html.Partial("_Components",Model)
+
+
+<p>@Html.ActionLink("Back", "ViewOrders")</p>

@@ -1,0 +1,40 @@
+﻿@model TechnicalSupportSystem.Models.Student
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+
+@if (Model != null)
+{
+    <h1>Welcome @Model.FirstName  @Model.LastName</h1>
+
+    <h3>Menu</h3>
+
+    <ul class="nav nav-list">
+        <li class='active'><a href="@Url.Action("RequestComponents")"><span>Place Order</span></a></li>
+        <li><a href="@Url.Action("ViewOrders")"><span>View Orders Placed</span></a></li>
+        <li><a href="@Url.Action("ProjectSpend")"><span>View Project Spend</span></a></li>
+        <li class='last'><a href="@Url.Action("RemainingBudget")"><span>View Remaining Budget</span></a></li>
+        @*<li><a href='#'><span>Edit Project Information</span></a></li>*@
+        @*<li class='last'><a href="@Url.Action("ProjectSpend")"><span>View Project Spend</span></a></li>*@
+    </ul>
+    
+    
+    @*<h3>Menu</h3>
+
+        <p>@Html.ActionLink("Request a Component","RequestComponents")</p>
+        <p>@Html.ActionLink("View Orders Placed", "ViewOrders")</p>
+        <p>@Html.ActionLink("View Remaining Budget","BudgetView")</p>
+        <p>@Html.ActionLink("View Project Spend","ProjectSpend")</p>*@
+
+
+
+}
+else
+{
+    @:username does not exist
+}
