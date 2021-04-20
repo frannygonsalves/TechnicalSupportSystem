@@ -258,9 +258,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\GenericRepository.cs" />
     <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Services\Interfaces\IProjectInformation.cs" />
+    <Compile Include="Services\ProjectInformation.cs" />
     <Compile Include="Services\OrderInformation.cs" />
-    <Compile Include="Services\IOrderInformation.cs" />
-    <Compile Include="Services\ITotalOrdersCostCalculator.cs" />
+    <Compile Include="Services\Interfaces\IOrderInformation.cs" />
+    <Compile Include="Services\Interfaces\ITotalOrdersCostCalculator.cs" />
     <Compile Include="Services\TotalOrdersCostCalculator.cs" />
     <Compile Include="ViewModels\OrdersDisplayView.cs" />
     <Compile Include="ViewModels\ProjectSpendView.cs" />
@@ -493,6 +495,7 @@
     <Content Include="Views\Admin\ProjectsRegistered.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Extensions\" />
     <Folder Include="Filters\" />
   </ItemGroup>
   <ItemGroup>

@@ -8,7 +8,6 @@ using System.Web.Mvc;
 using System.Web.Security;
 using TechnicalSupportSystem.Models;
 using TechnicalSupportSystem.DAL;
-using TechnicalSupportSystem.Models;
 using WebMatrix.WebData;
 
 namespace TechnicalSupportSystem.Controllers

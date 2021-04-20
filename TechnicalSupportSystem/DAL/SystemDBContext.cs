@@ -4,7 +4,6 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using TechnicalSupportSystem.Models;
-using TechnicalSupportSystem.Models;
 
 namespace TechnicalSupportSystem.DAL
 {

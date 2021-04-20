@@ -12,7 +12,6 @@ using System.Web;
 using System.Web.Mvc;
 using TechnicalSupportSystem.Models;
 using TechnicalSupportSystem.DAL;
-using TechnicalSupportSystem.Models;
 using TechnicalSupportSystem.ViewModels;
 
 

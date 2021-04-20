@@ -10,7 +10,6 @@ using System.Web.Routing;
 using TechnicalSupportSystem.Models;
 using TechnicalSupportSystem.DAL;
 using TechnicalSupportSystem.Infrastructure;
-using TechnicalSupportSystem.Models;
 using WebMatrix.WebData;
 
 namespace TechnicalSupportSystem

@@ -10,7 +10,6 @@ using Microsoft.Web.WebPages.OAuth;
 using WebMatrix.WebData;
 using TechnicalSupportSystem.Models;
 using TechnicalSupportSystem.DAL;
-using TechnicalSupportSystem.Models;
 using System.Data;
 using Postal;
 
